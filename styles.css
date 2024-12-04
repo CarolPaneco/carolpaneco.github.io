@@ -1,0 +1,445 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    overflow-x: hidden;
+    
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #ff007f, #ff77aa);
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #111;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ff77aa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.minha-foto {
+    width: 300px; /* Aumentei o tamanho da imagem */
+    height: 300px; /* Aumentei o tamanho da imagem */
+    border-radius: 40%; /* Mantém a imagem redonda */
+    object-fit: cover; /* Faz a imagem se ajustar sem distorcer */
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito flutuante */
+    position: relative;
+    animation: float 10s ease-in-out infinite; /* Animação de flutuação */
+    object-position: center 30% ;  /* Ajusta a parte da foto visível */
+}
+
+h1, h2, h3 {
+    font-family: 'Playwrite HR Lijeva', sans-serif;
+}
+
+h2{
+    font-size: 25px;
+}
+
+p, a{
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* A imagem sobe um pouco */
+    }
+}
+
+#contato a {
+    color: white;
+    text-decoration: none; /* Para remover o sublinhado, se desejar */
+}
+
+#contato a:hover {
+    color: #ddd; /* Cor ao passar o mouse */
+}
+
+
+
+.hobby-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hobby-card, .projeto-card {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px;
+    color: #ff77aa;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hobby-card:hover, .projeto-card:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(255,0,128,0.5), transparent);
+    animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #ff77aa;
+}
+
+
+.hobby-zigzag {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha quando necessário */
+    justify-content: space-between; /* Garante espaçamento entre os itens */
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.hobby-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.hobby-text {
+    max-width: 300px;
+    text-align: left;
+}
+
+.hobby-text h3 {
+    color: #ff77aa;
+}
+
+.hobby-item img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    animation: float 6s infinite ease-in-out;
+}
+
+.hobby-item:nth-child(even) img {
+    animation-delay: 1s;
+}
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: background-image 0.5s ease-in-out;
+}
+
+.image-container:hover {
+    background-color: red;
+}
+
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Alteração ao passar o mouse */
+.image-container:hover {
+    background-image: url('galinhas-hover.jpg'); /* Imagem ao passar o mouse */
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+#habilidades {
+    padding: 50px;
+    background: url('sua-imagem.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+#habilidades::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    filter: blur(8px);
+    z-index: -1;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.habilidade {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+    transform: translateY(-10px);
+    animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+.habilidade h3 {
+    color: #ff77aa;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.habilidade ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habilidade ul li {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.esquerda {
+    float: left;
+    margin-right: 5%;
+}
+
+.direita {
+    float: right;
+    margin-left: 5%;
+}
+
+#habilidades::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+
+#projetos {
+    padding: 50px;
+    background-color: #121212;
+    color: #fff;
+}
+
+.projeto {
+    margin-bottom: 40px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projeto h3 {
+    color: #ff77aa;
+}
+
+.projeto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.projeto a {
+    color: #ff77aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.prototipo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.prototipo img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+#habilidades {
+    padding: 50px;
+    background: url('sua-imagem.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+#habilidades::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    filter: blur(8px);
+    z-index: -1;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.habilidade {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+    transform: translateY(-10px);
+    animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+.habilidade h3 {
+    color: #ff77aa;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.habilidade ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habilidade ul li {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.esquerda {
+    float: left;
+    margin-right: 5%;
+}
+
+.direita {
+    float: right;
+    margin-left: 5%;
+}
+
+#habilidades::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+
+.habilidade {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+    transform: translateY(-10px);
+    animation: floatUp 3s ease-in-out infinite alternate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidade:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+
